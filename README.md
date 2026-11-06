@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rumah Ramah Indonesia (RRI) - Company Profile
 
-## Getting Started
+Website Company Profile resmi **Rumah Ramah Indonesia** yang diadaptasi dari estetika storytelling & editorial modern (EIGER Nature).
 
-First, run the development server:
+> *"Ruang temu, kolaborasi, dan aksi.  
+> Merawat keberagaman, menguatkan persatuan.  
+> 🇲🇨 Bersama untuk Indonesia"*
 
+---
+
+## 🚀 Cara Menjalankan Proyek
+
+### Dari Direktori Root (`web_eigernature.com`):
 ```bash
+# Menjalankan server pengembangan (Development mode)
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Membangun versi produksi (Build)
+npm run build
+
+# Menjalankan server produksi
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Atau Langsung dari Sub-folder `rri-web`:
+```bash
+cd rri-web
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Buka peramban Anda di [http://localhost:3000](http://localhost:3000).
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🎨 Struktur & Fitur Halaman
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Header & Navigasi**: Logo RRI responsif, navigasi cepat (Surat, Tentang, Pilar, Visi-Misi, Program, Dampak, Kontak).
+2. **Hero Section (Sinematik)**: Menampilkan slogan utama dengan nuansa visual gradien 6 warna logo RRI dan indikator *scroll down*.
+3. **Surat dari Rumah Ramah (Manifesto)**: Mengadaptasi format editorial surat pendiri ala Eiger Nature (*"Surat untuk Manusia, Keberagaman, dan Indonesia"*).
+4. **Mengenal Lebih Dekat**: Filosofi logo 6 figur manusia yang saling merangkul, visi dan identitas gerakan.
+5. **Tiga Pilar Gerakan**:
+   - **01. Ruang Temu** (Connecting & Dialog)
+   - **02. Ruang Kolaborasi** (Co-Creating & Synergy)
+   - **03. Ruang Aksi** (Impact & Action)
+6. **Visi & 4 Misi Strategis**: Landasan jangka panjang merawat kebinekaan dan inklusivitas.
+7. **4 Program Unggulan**: Temu Komunitas, Akademi Kepemimpinan Sosial, Ruang Kolaborasi Gotong Royong, dan Kampanye Ramah untuk Semua.
+8. **Jejak Langkah & Metrik**: Showcase dampak sosial lintas daerah di Indonesia.
+9. **Call To Action & Kontak**: Akses langsung email kolaborasi dan WhatsApp.
+10. **Footer Editorial**: Identitas lengkap, hak cipta © 2026, dan navigasi pelengkap.
