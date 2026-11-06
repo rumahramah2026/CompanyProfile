@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+}
+
+:root,
+[data-theme="dark"] {
+  --bg-page: #0d0e10;
+  --bg-card: rgba(22, 24, 28, 0.75);
+  --bg-card-hover: rgba(30, 33, 38, 0.95);
+  --bg-nav: rgba(13, 14, 16, 0.88);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --text-primary: #f3f4f6;
+  --text-secondary: #d1d5db;
+  --text-muted: #9ca3af;
+  --btn-primary-bg: #ffffff;
+  --btn-primary-text: #0d0e10;
+  --btn-secondary-bg: #1c1e22;
+  --btn-secondary-text: #e5e7eb;
+  --btn-secondary-border: rgba(255, 255, 255, 0.15);
+  --accent-badge-bg: rgba(255, 255, 255, 0.05);
+  --accent-badge-border: rgba(255, 255, 255, 0.1);
+  --scrollbar-track: #0d0e10;
+  --scrollbar-thumb: #282a30;
+}
+
+[data-theme="warm"] {
+  --bg-page: #f7f4ec;
+  --bg-card: rgba(240, 235, 224, 0.85);
+  --bg-card-hover: rgba(233, 227, 214, 0.95);
+  --bg-nav: rgba(247, 244, 236, 0.92);
+  --border-color: rgba(60, 50, 40, 0.14);
+  --border-subtle: rgba(60, 50, 40, 0.07);
+  --text-primary: #221e1a;
+  --text-secondary: #4a433c;
+  --text-muted: #796f64;
+  --btn-primary-bg: #221e1a;
+  --btn-primary-text: #f7f4ec;
+  --btn-secondary-bg: #eae3d4;
+  --btn-secondary-text: #2a2520;
+  --btn-secondary-border: rgba(60, 50, 40, 0.2);
+  --accent-badge-bg: rgba(60, 50, 40, 0.06);
+  --accent-badge-border: rgba(60, 50, 40, 0.15);
+  --scrollbar-track: #f7f4ec;
+  --scrollbar-thumb: #d7cebd;
+}
+
+[data-theme="light"] {
+  --bg-page: #ffffff;
+  --bg-card: #f9fafb;
+  --bg-card-hover: #f3f4f6;
+  --bg-nav: rgba(255, 255, 255, 0.92);
+  --border-color: #e5e7eb;
+  --border-subtle: #f1f5f9;
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6b7280;
+  --btn-primary-bg: #111827;
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #f3f4f6;
+  --btn-secondary-text: #1f2937;
+  --btn-secondary-border: #d1d5db;
+  --accent-badge-bg: #f3f4f6;
+  --accent-badge-border: #e5e7eb;
+  --scrollbar-track: #ffffff;
+  --scrollbar-thumb: #d1d5db;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease, border-color 0.25s ease;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
