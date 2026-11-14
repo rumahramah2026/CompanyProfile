@@ -34,7 +34,10 @@ export function PillarShowcase() {
 
         {/* Desktop: EIGER-inspired asymmetric editorial split + interactive panels */}
         <div className="hidden lg:grid lg:grid-cols-12 lg:gap-12">
-          <div className="col-span-5 flex flex-col justify-between py-2">
+          <div
+            key={activePillar.id}
+            className="animate-panel-in col-span-5 flex flex-col justify-between py-2"
+          >
             <div>
               <div className="flex items-center gap-3">
                 <span className="font-display text-sm font-bold tracking-[0.2em] text-[var(--text-muted)]">

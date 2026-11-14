@@ -11,6 +11,7 @@ import {
   X,
   ZoomIn,
 } from "lucide-react";
+import { PlateCropMarks } from "@/components/PlateCropMarks";
 import { EVENTS, SOCIAL_LINKS, type EventFlyerItem } from "@/data/site";
 
 export function AgendaSection() {
@@ -97,7 +98,14 @@ export function AgendaSection() {
             >
               {/* Left: Flyer Poster Exhibition Frame */}
               <div className="lg:col-span-5">
-                <div className="border border-[var(--border-hairline)] bg-[var(--bg-elevated)] p-3 sm:p-4">
+                <div className="relative border border-[var(--border-hairline)] bg-[var(--bg-elevated)] p-4 sm:p-5">
+                  <PlateCropMarks />
+
+                  <div className="mb-3 flex items-center justify-between text-[10px] font-medium tracking-[0.2em] uppercase text-[var(--text-muted)]">
+                    <span>Materi Publik</span>
+                    <span>{event.date}</span>
+                  </div>
+
                   <button
                     type="button"
                     onClick={() => setSelectedFlyer(event)}
@@ -287,7 +295,7 @@ export function AgendaSection() {
           onClick={() => setSelectedFlyer(null)}
         >
           <div
-            className="relative flex max-h-full max-w-4xl flex-col items-center gap-4"
+            className="animate-modal-zoom relative flex max-h-full max-w-4xl flex-col items-center gap-4"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex w-full items-center justify-between gap-4 text-white">

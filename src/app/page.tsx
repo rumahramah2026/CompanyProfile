@@ -1,9 +1,12 @@
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { AgendaSection } from "@/components/AgendaSection";
+import { HeroSection } from "@/components/HeroSection";
 import { InstagramIcon, TikTokIcon } from "@/components/Icons";
 import { Navbar } from "@/components/Navbar";
 import { PillarShowcase } from "@/components/PillarShowcase";
+import { PlateCropMarks } from "@/components/PlateCropMarks";
+import { ScrollProgress } from "@/components/ScrollProgress";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { SOCIAL_LINKS } from "@/data/site";
 
@@ -30,80 +33,21 @@ const COMMITMENTS = [
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)]">
+    <div className="relative min-h-screen bg-[var(--bg-page)] text-[var(--text-primary)]">
+      <div aria-hidden="true" className="rri-paper-grain" />
+      <ScrollProgress />
       <Navbar />
 
       <main>
-        {/* HERO — Monumental EIGER-inspired editorial opening */}
-        <section
-          id="beranda"
-          className="relative flex min-h-[calc(100vh-4rem)] flex-col justify-between border-b border-[var(--border-hairline)] bg-[var(--bg-page)] px-5 pt-6 pb-8 sm:px-8 sm:pt-8 sm:pb-10 lg:min-h-[min(820px,calc(100vh-4rem))] lg:px-12"
-        >
-          <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 border-b border-[var(--border-hairline)] pb-4 text-[11px] font-medium tracking-[0.22em] uppercase">
-            <span className="text-[var(--accent)]">
-              Keberagaman Untuk Persatuan
-            </span>
-            <span className="text-[var(--text-muted)]">Nusantara</span>
-          </div>
-
-          <div className="mx-auto my-auto w-full max-w-7xl py-8 sm:py-10">
-            <h1 className="font-display text-[clamp(3.25rem,11vw,8.75rem)] leading-[0.86] font-extrabold tracking-tight uppercase text-[var(--text-primary)]">
-              <span className="block">Ruang Temu,</span>
-              <span className="block pl-[6%] sm:pl-[10%]">Kolaborasi,</span>
-              <span className="block pl-[12%] text-[var(--accent)] sm:pl-[20%]">
-                Dan Aksi.
-              </span>
-            </h1>
-          </div>
-
-          <div className="mx-auto grid w-full max-w-7xl items-end gap-8 border-t border-[var(--border-hairline)] pt-7 lg:grid-cols-12">
-            <div className="lg:col-span-6">
-              <p className="text-lg leading-snug font-medium text-[var(--text-primary)] sm:text-xl">
-                Merawat keberagaman, menguatkan persatuan.
-              </p>
-              <p className="mt-2 text-base font-medium text-[var(--text-secondary)]">
-                Bersama untuk Indonesia
-              </p>
-            </div>
-
-            <div className="flex flex-wrap items-center justify-between gap-6 lg:col-span-6 lg:justify-end">
-              <div className="flex flex-wrap items-center gap-3">
-                <a
-                  href="#agenda"
-                  className="inline-flex items-center gap-2 bg-[var(--btn-primary-bg)] px-6 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase text-[var(--btn-primary-text)] transition-opacity hover:opacity-85"
-                >
-                  Lihat Agenda
-                  <ArrowDown className="h-3.5 w-3.5" />
-                </a>
-                <a
-                  href="#tentang"
-                  className="inline-flex items-center gap-2 border border-[var(--border-strong)] px-6 py-3.5 text-xs font-semibold tracking-[0.16em] uppercase text-[var(--text-primary)] transition-colors hover:border-[var(--text-primary)]"
-                >
-                  Tentang RRI
-                </a>
-              </div>
-
-              <div
-                aria-hidden="true"
-                className="hidden items-center gap-3 sm:flex"
-              >
-                <span className="text-[10px] font-medium tracking-[0.22em] uppercase text-[var(--text-muted)]">
-                  Gulir
-                </span>
-                <div className="relative h-10 w-px overflow-hidden bg-[var(--border-hairline)]">
-                  <div className="animate-scroll-line h-full w-full bg-[var(--accent)]" />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
+        <HeroSection />
 
         {/* TENTANG — Sticky visual plaque + editorial narrative (#story-section cadence) */}
         <section id="tentang" className="bg-[var(--bg-page)] py-24 sm:py-32">
           <div className="mx-auto grid max-w-7xl items-start gap-12 px-5 sm:px-8 lg:grid-cols-12 lg:gap-16 lg:px-12">
             {/* Left Sticky Brand Plaque — ensures charcoal text inside RRI.png stays sharp on every theme */}
             <div className="lg:sticky lg:top-24 lg:col-span-5">
-              <div className="border border-[var(--plaque-border)] bg-[var(--plaque-bg)] p-8 sm:p-12">
+              <div className="relative border border-[var(--plaque-border)] bg-[var(--plaque-bg)] p-8 sm:p-12">
+                <PlateCropMarks toneClass="border-neutral-900/20" />
                 <Image
                   src="/RRI.png"
                   alt="Logo resmi Rumah Ramah Indonesia"
