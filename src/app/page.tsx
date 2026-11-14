@@ -41,9 +41,9 @@ export default function HomePage() {
         >
           <div className="mx-auto flex w-full max-w-7xl flex-wrap items-center justify-between gap-4 border-b border-[var(--border-hairline)] pb-4 text-[11px] font-medium tracking-[0.22em] uppercase">
             <span className="text-[var(--accent)]">
-              Gerakan Kebersamaan Warga
+              Keberagaman Untuk Persatuan
             </span>
-            <span className="text-[var(--text-muted)]">Jakarta — Nusantara</span>
+            <span className="text-[var(--text-muted)]">Nusantara</span>
           </div>
 
           <div className="mx-auto my-auto w-full max-w-7xl py-8 sm:py-10">

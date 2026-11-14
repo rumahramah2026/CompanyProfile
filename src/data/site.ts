@@ -19,6 +19,7 @@ export interface EventFlyerItem {
   time: string;
   registrationTime: string;
   location: string;
+  locationUrl?: string;
   speakers: string[];
   flyerUrl: string;
   flyerWidth: number;
@@ -97,6 +98,7 @@ export const EVENTS: EventFlyerItem[] = [
     time: "14.00 WIB",
     registrationTime: "13.00 WIB",
     location: "Auditorium Perpustakaan Nasional, Jakarta",
+    locationUrl: "https://maps.app.goo.gl/xCe3aqDGK2BvTmo4A",
     speakers: [
       "Menteri Agama Republik Indonesia",
       "Abah Iwan Abdulrachman",

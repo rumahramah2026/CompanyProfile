@@ -66,7 +66,7 @@ export default async function OpenGraphImage() {
                   marginTop: "4px",
                 }}
               >
-                Gerakan Kebersamaan Warga
+                Keberagaman Untuk Persatuan
               </span>
             </div>
           </div>

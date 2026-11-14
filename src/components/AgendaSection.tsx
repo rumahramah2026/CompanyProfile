@@ -209,17 +209,24 @@ export function AgendaSection() {
                     <dt className="text-xs font-medium tracking-[0.18em] uppercase text-[var(--text-muted)] sm:col-span-4">
                       Lokasi
                     </dt>
-                    <dd className="flex flex-wrap items-baseline justify-between gap-2 text-sm font-medium text-[var(--text-primary)] sm:col-span-8">
-                      <span>{event.location}</span>
+                    <dd className="text-sm font-medium text-[var(--text-primary)] sm:col-span-8">
                       <a
-                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`}
+                        href={
+                          event.locationUrl ??
+                          `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(event.location)}`
+                        }
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 border-b border-[var(--border-strong)] pb-0.5 text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--text-secondary)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                        className="group flex flex-wrap items-baseline justify-between gap-2 transition-colors hover:text-[var(--accent)]"
                       >
-                        <MapPin className="h-3 w-3" />
-                        Buka Peta
-                        <ArrowUpRight className="h-3 w-3" />
+                        <span className="group-hover:underline">
+                          {event.location}
+                        </span>
+                        <span className="inline-flex items-center gap-1 border-b border-[var(--border-strong)] pb-0.5 text-[11px] font-semibold tracking-[0.12em] uppercase text-[var(--text-secondary)] transition-colors group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]">
+                          <MapPin className="h-3 w-3" />
+                          Buka Peta
+                          <ArrowUpRight className="h-3 w-3" />
+                        </span>
                       </a>
                     </dd>
                   </div>
