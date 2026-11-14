@@ -18,7 +18,7 @@ const barlowCondensed = Barlow_Condensed({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://rumahramah.id"),
-  title: "Rumah Ramah Indonesia — Ruang Temu, Kolaborasi, dan Aksi",
+  title: "Rumah Ramah Indonesia",
   description:
     "Ruang temu, kolaborasi, dan aksi. Merawat keberagaman, menguatkan persatuan. Bersama untuk Indonesia.",
   icons: {
