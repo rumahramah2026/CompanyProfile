@@ -44,3 +44,6 @@ next-env.d.ts
 raw/
 replica/
 meta.json
+
+.vercel
+.env*

@@ -1,27 +1,45 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google";
+import { Barlow_Condensed, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 
-const sansFont = Plus_Jakarta_Sans({
-  variable: "--font-sans",
+const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
 });
 
-const serifFont = Playfair_Display({
-  variable: "--font-serif",
+const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
+  weight: ["600", "700", "800"],
+  variable: "--font-barlow-condensed",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Rumah Ramah Indonesia | Ruang Temu, Kolaborasi, dan Aksi",
+  metadataBase: new URL("https://rumahramah.id"),
+  title: "Rumah Ramah Indonesia — Ruang Temu, Kolaborasi, dan Aksi",
   description:
-    "Company Profile Rumah Ramah Indonesia. Ruang temu, kolaborasi, dan aksi. Merawat keberagaman, menguatkan persatuan. Bersama untuk Indonesia.",
+    "Ruang temu, kolaborasi, dan aksi. Merawat keberagaman, menguatkan persatuan. Bersama untuk Indonesia.",
   icons: {
-    icon: "/RRI_Polos.png",
+    icon: [
+      { url: "/RRI_Polos.png", type: "image/png" },
+    ],
     shortcut: "/RRI_Polos.png",
     apple: "/RRI_Polos.png",
+  },
+  openGraph: {
+    title: "Rumah Ramah Indonesia",
+    description:
+      "Ruang temu, kolaborasi, dan aksi. Merawat keberagaman, menguatkan persatuan. Bersama untuk Indonesia.",
+    type: "website",
+    locale: "id_ID",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Rumah Ramah Indonesia",
+    description:
+      "Ruang temu, kolaborasi, dan aksi. Merawat keberagaman, menguatkan persatuan. Bersama untuk Indonesia.",
   },
 };
 
@@ -33,28 +51,20 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`${sansFont.variable} ${serifFont.variable} scroll-smooth antialiased`}
+      data-theme="dark"
       suppressHydrationWarning
+      className={`${plusJakartaSans.variable} ${barlowCondensed.variable}`}
     >
       <head>
         <link rel="icon" href="/RRI_Polos.png" type="image/png" />
         <link rel="apple-touch-icon" href="/RRI_Polos.png" />
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(){
-              try {
-                var saved = localStorage.getItem('rri_theme');
-                if (saved === 'warm' || saved === 'light' || saved === 'dark') {
-                  document.documentElement.setAttribute('data-theme', saved);
-                } else {
-                  document.documentElement.setAttribute('data-theme', 'dark');
-                }
-              } catch(e){}
-            })()`,
+            __html: `(function(){try{var t=localStorage.getItem('rri_theme');if(t==='dark'||t==='warm'||t==='light'){document.documentElement.setAttribute('data-theme',t);}else{document.documentElement.setAttribute('data-theme','dark');}}catch(e){}})();`,
           }}
         />
       </head>
-      <body className="min-h-screen font-sans">
+      <body className="antialiased selection:bg-[var(--accent)] selection:text-white">
         {children}
       </body>
     </html>
